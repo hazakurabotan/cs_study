@@ -1,0 +1,7 @@
+# 全部無視
+*
+
+# 除外したいファイルとフォルダを明示的に指定
+!.gitignore
+!cs_study/
+!cs_study.sln
