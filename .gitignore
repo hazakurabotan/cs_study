@@ -4,4 +4,14 @@
 # 除外したいファイルとフォルダを明示的に指定
 !.gitignore
 !cs_study/
-!cs_study.sln
+!cs_study/Program.cs
+!if_study
+!if_study/Program.cs
+!switch
+!switch_study/Program.cs
+!For_study
+!For_study/Program.cs
+!method_study
+!method_study/Program.cs
+!object_study
+!object_study/Program.cs
