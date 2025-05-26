@@ -1,16 +1,41 @@
-﻿using object_study;
+﻿//複数のプレイヤーをたくさん登場させて、それぞれのステータスを除いたり、特技を順番に披露させるプログラム
 
-Player suzuki = new Player(); //クラスの実体か　いんすたんすか
-suzuki.Name("鈴木です");
-suzuki.Attack();
-suzuki.StatusDisplay();
+using object_study;
+using System.Threading;
 
-Player tanaka = new Player();
-suzuki.Name("田中です");
-tanaka.Attack();
-tanaka.StatusDisplay();
+Player suzuki = new Player("鈴木"); //クラスの実体化 インスタンス化
+//suzuki.Name("鈴木");
+//suzuki.Action();
+//suzuki.StatusDisplay();
+//suzuki.SpecialAttack();
 
-Player yamada = new Player();
-suzuki.Name("山田です");
-yamada.Attack();   
-yamada.StatusDisplay();
+Player tanaka = new Warrior("");
+//tanaka.NameSet("田中");
+////tanaka.name = "田中";
+//tanaka.Action(1);
+//tanaka.StatusDisplay();
+//tanaka.SpecialAttack();
+
+Warrior yamada = new Warrior("山田");
+//yamada.NameSet("山田");
+//yamada.Action(2);
+//yamada.HardAttack();
+//yamada.StatusDisplay();
+//yamada.SpecialAttack();
+
+
+List<Player> players = new List<Player>();
+players.Add(suzuki);
+players.Add(tanaka);  
+players.Add(yamada);
+
+players.RemoveAt(1);
+
+//配列に順番に処理する繰り返し構文　米リストも指定可能
+//抽出する情報の型名　一時的に情報取り扱う返送
+
+foreach (Player p in players)
+{
+    p.StatusDisplay();
+    p.SpecialAttack();
+}
